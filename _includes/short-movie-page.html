@@ -1,0 +1,13 @@
+{% capture cat %}{{ entry.class }}-{{ page.number }}{% endcapture %}
+<ul class="list-reset">
+  {% for film in site.categories[cat] reversed %}
+    {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture %}
+    <li class="list-element {% if modulo =='0' or forloop.last == true %}last{% endif %} {% if forloop.last == true %}table-end{% endif %}">
+      {% include shortfilm.html %}
+    </li>
+    {% if modulo == "0" and forloop.last != true %}
+      <li class="list-divider">
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

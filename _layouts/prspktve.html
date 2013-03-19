@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div id="page-prspktve">
+  <!-- Titel der Veranstaltung -->
+  <div class="prspktve-title page-width" id="programm">
+    <h2>KINO prspktve #{{ page.number }}</h2>
+  </div>
+  <div class="prspktve-tabs tabs-bottom">
+    {% include sub-navigation.html %}
+    <div class="tabs-spacer"></div>
+    {% for entry in page.menu %}
+      <div id="tabs-{{ forloop.index }}" class="page-width">
+        <div class="{{ entry.class }}">
+          {% if entry.class == "longmovie" %}
+            {% include long-movie-page.html %}
+          {% else %}
+            {% if entry.class == "shortmovie" %}
+              {% include short-movie-page.html %}
+            {% else%}
+              {% if entry.class == "media" %}
+                {% include media-page.html %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- <div class="page-width">
+  {% for e in site.categories.prspktve reversed %}
+    {% if e.number == page.number %}
+      <img src="/images/kp{{ e.number }}/plakat_thumb.jpg" />
+    {% else %}
+      <a href="{{ e.url }}"><img src="/images/kp{{ e.number }}/plakat_thumb.jpg" /></a>
+    {% endif %}
+  {% endfor %}
+</div> -->

@@ -1,0 +1,64 @@
+// Layout for the short movie page
+
+.shortmovie {
+  @include span-columns(12);
+  @include row(table);
+
+  ul {
+    @include clearfix;
+    margin: $baseline 0px;
+  }
+
+  .list-element {
+    @include span-columns(4);
+    @include pad();
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: $baseline;
+    margin-bottom: $baseline;
+    border-width: 0px 5px 0px 0px;
+    @include border-image(url(../images/border_vertical.png) 100 repeat);
+
+    &.last { border-right: 0px; }
+    &:last-child { padding-right: $baseline; }
+
+    h3 { margin-top: 0px; }
+
+    .table-end { @include reset-display; }
+  }
+
+  // Horizontale Trennlinie
+  .list-divider {
+    clear: left;
+    border-width: 0px 0px 5px 0px;
+    margin: $baseline - 3px $baseline $baseline - 2px $baseline;
+    @include border-image(url(../images/border.png) 100 repeat);
+  }
+
+  // Bild zum Film
+  .list-element-still {
+    @include fill-parent;
+    height: 125px;
+    width: 279px;
+    text-align: center;
+    background: #000;
+  }
+
+  // Regie, Dauer ...
+  .list-element-infos {
+    small span {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-left: 10px;
+
+      &.first {
+        padding-left: 0px;
+      }
+    }
+  }
+
+  // Beschreibung zum Film
+  .list-element-synopse {
+    margin: 0px;
+  }
+}

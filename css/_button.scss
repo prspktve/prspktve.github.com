@@ -1,0 +1,39 @@
+.button {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 1.5em; /* 21px */
+  line-height: 1em; /* 21px */
+  padding-top: 17px;
+  padding-bottom: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  border-width: 4px;
+  @include border-image(url(../images/border_button.png) 4 4 4 4 repeat);
+}
+
+.button-primary {
+  background-color: rgba($color-kp4, 0.5);
+
+  &:hover {
+    background-color: rgba($color-kp4, 1);
+  }
+}
+
+.button-small {
+  display: inline-block;
+  padding: 0px 10px;
+  font-size: 14px;
+}
+
+
+.button span {
+  position: relative;
+}
+
+.button:active {
+  span {
+    top: 1px;
+  }
+}

@@ -1,0 +1,72 @@
+#page-about, #page-unterstuetzer, #page-kontakt, #page-home, #page-impressum {
+  margin-top: $baseline*3;
+}
+
+#page-unterstuetzer {
+
+  ul {
+  padding-bottom: $baseline;
+
+    &.list-one li {
+      span { font-weight: bold; }
+      a { display: block; }
+      margin-bottom: $baseline;
+    }
+
+    &.list-two li {
+      span {
+        display: inline-block;
+        width: 100px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      margin-bottom: $baseline;
+    }
+  }
+}
+
+#page-kontakt {
+  .small-content-column.last {
+    @include omega();
+    @include clearfix;
+  }
+
+  #email {
+    @include span-columns(8 of 10);
+    @include shift(1);
+
+    margin-bottom: 21px;
+    display: block;
+    clear: left;
+  }
+}
+
+#page-home {
+
+  .small-content-column.left {
+    padding-top: $baseline;
+
+    img {
+      @include box-shadow(2px 2px 8px);
+      border: 4px solid #FFF;
+    }
+  }
+
+  .small-content-column.right {
+
+    .details { font-weight: bold; }
+
+    .subheading {
+      color: #FFF;
+      font-weight: bold;
+    }
+
+    h2 {
+      border-width: 0px 0px 5px 0px;
+      margin-bottom: 16px;
+      @include border-image(url(../images/border.png) 100 repeat);
+    }
+  }
+}
+

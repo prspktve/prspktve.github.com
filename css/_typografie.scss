@@ -1,0 +1,52 @@
+body {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: 1em; /* 14px */
+  line-height: 1.5em; /* 21px */
+  margin: 0 0 1.5em 0;
+}
+
+small {
+  font-size: 0.8571em; /* 12px */
+  line-height: 0.8571em; /* 12px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+  font-size: 3.2857em; /* 46px */
+  line-height: 1.3696em; /* 63px */
+  margin-top: 0.4565em;
+  margin-bottom: 0em;
+}
+
+h2 {
+  font-size: 2.5em; /* 35px */
+  line-height: 1.2em; /* 42px */
+  margin-top: 0.6em;
+  margin-bottom: 0em;
+  border-width: 0px 0px 5px 0px;
+  margin-bottom: 16px;
+  @include border-image(url(../images/border.png) 100 repeat);
+}
+
+h3 {
+  font-size: 1.7143em; /* 24px */
+  line-height: 1.75em; /* 42px */
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+a, button {
+  color: #000;
+
+  &:focus {
+    outline: 0px;
+  }
+}

@@ -1,0 +1,25 @@
+#page-prspktve {
+
+  // Ueberschrift
+  .prspktve-title {
+    text-align: center;
+
+    h2 {
+      margin-top: 0px;
+      @include reset-h2;
+    }
+  }
+
+  .shortmovie, .longmovie, .media {
+    @include screen;
+    min-height: 29 * $baseline;
+  }
+
+  .read-more, .read-less {
+    a {
+      background: rgba(91, 91, 91, 0.5);
+      @extend .button;
+      @extend .button-small;
+    }
+  }
+}

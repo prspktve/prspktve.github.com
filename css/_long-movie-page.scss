@@ -1,0 +1,43 @@
+.longmovie {
+
+  ul {
+    @include span-columns(8 of 12);
+    @include shift(2);
+    @include pad($baseline);
+
+    li {
+      @include clearfix;
+      margin-top: 3*$baseline;
+    }
+  }
+
+  .film-element-media, .film-element-text {
+    @include span-columns(4 of 8);
+  }
+
+  .film-element-media {
+    margin-top: $baseline;
+    
+    .film-element-media-still {
+      height: 9*$baseline;
+    }
+
+    .film-element-media-video {
+    }
+  }
+
+  .film-element-text {
+    h2 {
+      @include reset-h2;
+    }
+
+    small {
+      span {
+        display: inline-block;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 50px;
+      }
+    }
+  }
+}

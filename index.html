@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign event = site.categories.prspktve[0] %}
+<div id="page-home" class="page-width">
+  <div class="small-content screen">
+    <div class="small-content-column left">
+      <img src="images/kp{{ event.number }}/plakat_min.jpg" />
+    </div>
+    <div class="small-content-column right">
+      <h2>KINO prspktve #{{ event.number }}</h2>
+      <p class="details">{{ event.day }} - {{ event.time }} Uhr - {{ event.place }}</p>
+      <p class="subheading">6 Kurzfilme - Kritische Diskussion - Anwesende Filmemacher</p>
+      <p>Wir bieten euch eine gemütliche Café-Atmosphäre, tolle festivalerprobte Filme, eine große Leinwand und die Anwesenheit der Filmemacher.</p>
+      <p>Im Anschluss kann bei Wein, Bier oder Tee weiter diskutiert werden.</p>
+      <p>Der Eintritt ist auf Spendenbasis (empfohlene Spende 2€ - 4€)</p>
+      <a class="button button-primary" href="{{ event.url }}"><span>Zum Programm</span></a>
+    </div>
+  </div>
+</div>
+
+

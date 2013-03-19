@@ -1,0 +1,24 @@
+@mixin reset-list-style {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.list-reset {
+  @include reset-list-style;
+}
+
+// Grauer Hintergrund mit Schatten
+@mixin screen {
+  background-color: rgba(91, 91, 91, 0.5);
+  @include box-shadow(0 0 6px #111);
+}
+
+.screen {
+  @include screen;
+}
+
+@mixin reset-h2 {
+  border: 0px;
+  margin-bottom: $baseline;
+}

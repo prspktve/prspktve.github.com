@@ -1,0 +1,159 @@
+.page-width {
+  @include outer-container;
+}
+
+// Hintergrund für About/Kontakt/Impressum/usw.
+.small-content {
+  @include clearfix;
+  @include span-columns(10);
+  @include shift(1);
+  @include pad($baseline);
+
+  .small-content-column {
+    @include clearfix;
+    @include span-columns(4 of 10);
+    
+    &.left { @include shift(1); }
+  }
+
+  .small-content-column-single {
+    @include span-columns(8 of 10);
+    @include shift(1);
+  }
+}
+
+// Hintergrund (Struktur)
+body {
+  background: url(../images/extra_clean_paper.png);
+}
+
+// Bild im Hintergrund
+#body {
+  background: url(../images/strahlen.png) no-repeat top center;
+}
+
+#main {
+  padding-top: $baseline;
+  @include clearfix;
+}
+
+// Headline, Logo and  Navigation
+#header {
+  @include clearfix;
+  @include span-columns(10);
+  @include shift(1);
+  height: $baseline*11;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+  }
+}
+
+#logo { @include span-columns(3 of 8); }
+
+#headline {
+  position: absolute;
+  bottom: 0px;
+  left: 170px;
+}
+
+// Navigation
+nav {
+  @include span-columns(5 of 8);
+  @include clearfix;
+  height: $baseline*7;
+  padding-top: $baseline;
+  float: right;
+
+  ul {
+    @include clearfix;
+    @include reset-list-style;
+    padding-top: $baseline;
+
+    li {
+      float: right;
+      width: 100px;
+      text-align: left;
+    }
+  }
+
+  a {
+    display: inline-block;
+    width: 1px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  #nav-1 {
+    @include transform(rotate(15deg));
+  }
+
+  #nav-2 {
+    @include transform(rotate(18deg));
+  }
+
+  #nav-3 {
+    @include transform(rotate(21deg));
+  }
+
+  #nav-4 {
+    @include transform(rotate(26deg));
+  }
+}
+
+//SUB-Navigation
+.prspktve-tabs-nav {
+  padding-left: 50px;
+  position: relative;
+  border-width: 4px 0px 0px 0px;
+  @include border-image(url(../images/border_button.png) 4 4 4 4 repeat);
+
+  li {
+    margin-top: -4px;
+    margin-right: $baseline;
+    padding: 0px 10px;
+    border-width: 0px 4px 4px 4px;
+    @include border-image(url(../images/border_button.png) 4 4 4 4 repeat);
+
+    a {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+// Fußzeile
+footer {
+  
+  background-color: rgba(0, 0, 0, 0.7);
+  @include border-image(url(../images/border-footer.jpg) 9 0 0 repeat);
+  border-top: 9px solid;
+  padding: $baseline 0px;
+  margin-top: $baseline*2;
+
+  ul {
+    @include reset-list-style;
+    @include span-columns(6);
+    @include shift(6);
+    padding-left: $baseline;
+    
+    li {
+      &.last { padding-top: $baseline; }
+      &.first { padding-bottom: $baseline; }
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #FFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

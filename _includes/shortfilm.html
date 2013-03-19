@@ -1,0 +1,13 @@
+<div class="list-element-still">
+  <img src="/images/kp{{ page.number }}/{{ film.img }}_small.jpg" />
+</div>
+<h3>{{ film.name }}</h3>
+<p class="list-element-infos">
+  <small>
+    <span class="first">Regie:</span> {{ film.author }}
+    {% if film.duration %}
+      <span>Länge:</span> {{ film.duration }}&nbsp;min
+    {% endif %}
+  </small>
+</p>
+<p class="list-element-synopse">{{ film.content }}</p>

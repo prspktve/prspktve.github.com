@@ -1,0 +1,21 @@
+<div class="film-element-media">
+  <div class="film-element-media-still">
+    <img src="/images/kp{{ page.number }}/{{ film.img }}_small.jpg" />
+  </div>
+    {% if film.vimeo_id %}
+      <div class="film-element-media-video">
+        <h3>{{ film.name }} - Trailer</h3>
+        {% include video_snippet.html %}
+      </div>
+    {% endif %}
+</div>
+<div class="film-element-text">
+  <h2>{{ film.name }}</h2>
+  <p class="film-list-element-infos">
+    <small>
+      <span>Regie:</span> {{ film.author }}<br />
+      <span>Länge:</span> {{ film.duration }} min
+    </small>
+  </p>
+  <p class="film-element-synopse">{{ film.content }}</p>
+</div>

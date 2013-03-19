@@ -1,0 +1,9 @@
+{% capture cat %}{{ entry.class }}-{{ page.number }}{% endcapture %}
+<ul class="list-reset">
+  {% for film in site.categories[cat] %}
+    {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture %}
+    <li class="film-element">
+      {% include longfilm.html %}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+<ul class="prspktve-tabs-nav page-width">
+  {% for entry in page.menu %}
+    <li>
+      <a href="#tabs-{{ forloop.index }}">{{ entry.title }} -
+        <span>{{ entry.note }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
